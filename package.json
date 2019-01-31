@@ -3,12 +3,14 @@
 	"name": "ASP.NET",
 	"scripts": {
 		"build": "webpack --config webpack.config.dev.js",
-		"dev": "webpack-dev-server --config webpack.config.dev.js"
+		"dev": "webpack-dev-server --config webpack.config.dev.js",
+		"deploy": "npm run build; push-dir --dir=dist --remote=paulFork --branch=gh-pages --cleanup"
 	},
 	"private": true,
 	"devDependencies": {
 		"css-loader": "^2.1.0",
 		"html-webpack-plugin": "^3.2.0",
+		"push-dir": "^0.4.1",
 		"vue-loader": "^15.5.1",
 		"vue-style-loader": "^4.1.2",
 		"vue-template-compiler": "^2.5.21",
